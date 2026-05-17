@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBeauty | Inteligência Circular em Skincare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">EcoBeauty 🌸</div>
+            <nav aria-label="Navegação Principal">
+                <ul class="nav-links">
+                    <li><a href="#" class="tab-link active" data-tab="inicio">Início</a></li>
+                    <li><a href="#" class="tab-link" data-tab="quem-somos">Quem Somos</a></li>
+                    <li><a href="#" class="tab-link" data-tab="coletas">Coletas</a></li>
+                    <li><a href="#" class="tab-link" data-tab="apoiar">Apoiar</a></li>
+                </ul>
+            </nav>
+            <div class="accessibility-controls">
+                <button onclick="toggleFontSize()">A+</button>
+                <button onclick="toggleDarkMode()">Contraste</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="tab-content active-tab">
+            <div class="hero">
+                <div class="container">
+                    <h1>Sua rotina de Skincare merece o descarte certo.</h1>
+                    <p>Conectamos consumidores de cosméticos a cooperativas de reciclagem. Valorizamos o trabalho de catadores locais, evitamos a contaminação ambiental e geramos renda através da beleza limpa.</p>
+                    <button class="btn" style="background-color: var(--secondary-color);" onclick="switchTab('coletas')">Ver Pedidos de Coleta</button>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: var(--spacing-xl);">
+                <h2 class="section-title">O Desafio dos Resíduos de Skincare</h2>
+                <div class="grid-container">
+                    <article class="card">
+                        <h3>🧪 Poluição Química</h3>
+                        <p>Restos de ácidos e cremes descartados de forma incorreta prejudicam a qualidade da nossa água urbana.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🧴 Logística Complexa</h3>
+                        <p>Frascos de séruns e tampas pump misturam plástico e metal. Criamos uma triagem direcionada para facilitar.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🌱 Impacto Circular</h3>
+                        <p>Sua embalagem vazia e limpa transforma-se em renda digna para cooperativas e catadores locais.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="quem-somos" class="tab-content container">
+            <h1 class="section-title">Nossa Jornada Sustentável</h1>
+            <div class="card" style="margin-bottom: var(--spacing-xl); line-height: 1.8;">
+                <p style="font-size: 1.15rem; margin-bottom: 16px;">
+                    A <strong>EcoBeauty</strong> nasceu da união entre a paixão pela estética e o respeito profundo pelo meio ambiente. Percebemos que o mercado de cosméticos gera uma quantidade massiva de resíduos complexos que quase nunca são reciclados pelos canais tradicionais.
+                </p>
+                <p style="font-size: 1.15rem;">
+                    Nossa plataforma atua como uma ponte inteligente: nós conectamos diretamente os consumidores e clínicas de estética com cooperativas e catadores de material reciclável locais.
+                </p>
+            </div>
+
+            <div class="grid-container">
+                <article class="card">
+                    <h3>🌸 Missão</h3>
+                    <p>Transformar o descarte da beleza em um ato de responsabilidade socioambiental, revertendo esses materiais em faturamento e dignidade para as cooperativas parceiras.</p>
+                </article>
+                <article class="card">
+                    <h3>👁️ Visão</h3>
+                    <p>Ser a plataforma de referência nacional em logística reversa para o mercado de cosméticos e estética, unindo tecnologia e preservação.</p>
+                </article>
+                <article class="card">
+                    <h3>💎 Valores</h3>
+                    <p><strong>• Inclusão Social:</strong> O catador como protagonista.<br><strong>• Estética Limpa:</strong> Beleza sem pegada negativa.<br><strong>• Transparência:</strong> Conexões diretas e éticas.</p>
+                </article>
+            </div>
+
+            <h2 class="section-title">Quem Desenvolveu o Projeto</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="avatar-wrapper">
+                        <img src="sua-foto.png" alt="Sua Foto/Avatar">
+                    </div>
+                    <h4>Seu Nome</h4>
+                    <p>Co-fundadora & Dev</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar-wrapper">
+                        <img src="foto-amiga.png" alt="Avatar da Amiga">
+                    </div>
+                    <h4>Nome da Sua Amiga</h4>
+                    <p>Co-fundadora & Dev</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="coletas" class="tab-content container">
+            <h1 class="section-title">Lotes de Embalagens Prontos para Retirada</h1>
+            <div class="grid-container">
+                <article class="card">
+                    <h2>Lote: Frascos de Vidro de Sérum</h2>
+                    <p><strong>Clínica Estética Jardins</strong></p>
+                    <div style="margin: 12px 0;"><span class="tag">Vidro Limpo</span></div>
+                    <p>80 frascos higienizados prontos para triagem.</p>
+                    <button class="btn" style="margin-top: 16px; background-color: var(--secondary-color);" onclick="alert('Coleta aceita!')">Aceitar Retirada</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="apoiar" class="tab-content container">
+            <div class="form-container">
+                <h1 style="text-align: center; margin-bottom: 8px;">Colabore com a Rede</h1>
+                <p style="text-align: center; margin-bottom: 32px;">Cadastre seu perfil ou anuncie seus frascos acumulados.</p>
+
+                <form id="apoioForm">
+                    <div class="form-group">
+                        <label for="nome">Nome / Instituição</label>
+                        <input type="text" id="nome" required placeholder="Digite seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail ou WhatsApp</label>
+                        <input type="email" id="email" required placeholder="exemplo@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="perfil">Você se identifica como:</label>
+                        <section id="inicio" class="tab-content active-tab">
+            <div class="hero">
+                <div class="container">
+                    <h1>Sua rotina de Skincare merece o descarte certo.</h1>
+                    <p>Conectamos consumidores de cosméticos a cooperativas de reciclagem. Valorizamos o trabalho de catadores locais, evitamos a contaminação ambiental e geramos renda através da beleza limpa.</p>
+                    <button class="btn" style="background-color: var(--secondary-color);" onclick="switchTab('coletas')">Ver Pedidos de Coleta</button>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: var(--spacing-xl);">
+                <h2 class="section-title">Guia de Higienização e Descarte</h2>
+                <p style="text-align: center; max-width: 600px; margin: 0 auto var(--spacing-lg); color: var(--text-color); opacity: 0.8;">
+                    Embalagens de cosméticos possuem resíduos químicos complexos. Siga os 4 passos abaixo para garantir que o seu frasco seja aceito pelas cooperativas e reciclado corretamente:
+                </p>
+                
+                <div class="grid-container" style="margin-bottom: var(--spacing-xl);">
+                    <article class="card" style="border-top: 4px solid var(--color-2);">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-sm);">1. 🧪 Esvaziar</div>
+                        <h3>Use até o fim</h3>
+                        <p>Antes de descartar, certifique-se de usar todo o produto do frasco (séruns, tônicos, cremes). O acúmulo de produto químico dificulta a reciclagem mecânica e contamina outros materiais.</p>
+                    </article>
+
+                    <article class="card" style="border-top: 4px solid var(--color-3);">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-sm);">2. 🚰 Enxaguar</div>
+                        <h3>Retire os excessos</h3>
+                        <p>Coloque um pouco de água dentro do frasco de vidro ou plástico, balance bem e enxágue. Deixe secar de cabeça para baixo. Cooperativas não aceitam frascos melados ou com restos biológicos/químicos.</p>
+                    </article>
+
+                    <article class="card" style="border-top: 4px solid var(--color-4);">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-sm);">3. ♻️ Separar</div>
+                        <h3>Retire as válvulas</h3>
+                        <p>As tampas de conta-gotas e válvulas <em>pump</em> misturam plástico, metal e borracha, sendo de difícil reciclagem. Separe o frasco de vidro limpo dessas tampas complexas.</p>
+                    </article>
+
+                    <article class="card" style="border-top: 4px solid var(--color-5);">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-sm);">4. 📅 Descartar</div>
+                        <h3>Anuncie na Rede</h3>
+                        <p>Junte um pequeno lote de embalagens limpas e secas e vá até a nossa aba <strong>Apoiar</strong> para cadastrar seu lote. Nós avisaremos as cooperativas mais próximas para coletar.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="section-title">Por Que Esse Trabalho é Urgente?</h2>
+                <div class="grid-container">
+                    <article class="card">
+                        <h3>🧪 Poluição Química</h3>
+                        <p>Restos de ácidos e cremes descartados de forma incorreta prejudicam a qualidade da nossa água urbana.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🧴 Logística Complexa</h3>
+                        <p>Frascos de séruns e tampas pump misturam plástico e metal. Criamos uma triagem direcionada para facilitar.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🌱 Impacto Circular</h3>
+                        <p>Sua embalagem vazia e limpa transforma-se em renda digna para cooperativas e catadores locais.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+                    </div>
+                    <div class="form-group">
+                        <label for="habilidades">Quais materiais você tem para descarte?</label>
+                        <textarea id="habilidades" rows="4" placeholder="Ex: Vidros de sérum, bisnagas..."></textarea>
+                    </div>
+                    <div style="display: flex; gap: 16px; margin-top: 32px;">
+                        <button type="submit" class="btn" style="flex: 2;">Concluir Cadastro</button>
+                        <button type="button" class="btn btn-secondary" style="flex: 1;" id="btnSalvar">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="chatbot-wrapper">
+        <button class="chatbot-toggle" onclick="toggleChat()">💬</button>
+        <div class="chatbot-box" id="chatBox">
+            <div class="chatbot-header">
+                <span>GlowAssist 🌸</span>
+                <button onclick="toggleChat()">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatMessages">
+                <div class="message bot-message">Olá! Sou o <strong>GlowAssist</strong>. Escreva sua dúvida ou digite uma palavra-chave: <br><br>• <strong>coletas</strong><br>• <strong>limpar</strong><br>• <strong>apoiar</strong></div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatInput" placeholder="Digite aqui..." onkeypress="if(event.key==='Enter') sendChatMessage()">
+                <button onclick="sendChatMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container"><p>&copy; 2026 EcoBeauty. Skincare consciente e inclusão socioambiental.</p></div>
+    </footer>
+
+    <script>
+        /* SISTEMA DE NAVEGAÇÃO POR ABAS (TABS) SEM RECARREGAR */
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetTab = link.getAttribute('data-tab');
+                switchTab(targetTab);
+            });
+        });
+
+        function switchTab(tabId) {
+            tabContents.forEach(content => content.classList.remove('active-tab'));
+            tabLinks.forEach(link => link.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active-tab');
+            const targetLink = document.querySelector(`[data-tab="${tabId}"]`);
+            if(targetLink) targetLink.classList.add('active');
+            
+            window.scrollTo(0, 0);
+        }
+
+        /* MEMÓRIA DO MODO ESCURO E CONTRASTE */
+        function toggleDarkMode() {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+        }
+
+        function toggleFontSize() {
+            const isFontLarge = document.documentElement.classList.toggle('font-large');
+            localStorage.setItem('fontLarge', isFontLarge ? 'enabled' : 'disabled');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('darkMode') === 'enabled') document.body.classList.add('dark-mode');
+            if (localStorage.getItem('fontLarge') === 'enabled') document.documentElement.classList.add('font-large');
+        });
+
+        /* CHATBOT INTERATIVO */
+        function toggleChat() { document.getElementById('chatBox').classList.toggle('open'); }
+        
+        function sendChatMessage() {
+            const input = document.getElementById('chatInput');
+            const text = input.value.trim();
+            if(!text) return;
+            appendMessage(text, 'user-message');
+            input.value = '';
+            setTimeout(() => { appendMessage(getBotReply(text), 'bot-message'); }, 400);
+        }
+
+        function appendMessage(text, className) {
+            const container = document.getElementById('chatMessages');
+            const msg = document.createElement('div'); msg.className = `message ${className}`;
+            msg.innerHTML = text; container.appendChild(msg); container.scrollTop = container.scrollHeight;
+        }
+
+        function getBotReply(userInput) {
+            const input = userInput.toLowerCase();
+            if(input.includes('coleta')) { switchTab('coletas'); return 'Mudei você para a aba de <strong>Coletas</strong> para ver os lotes disponíveis!'; }
+            if(input.includes('limpar') || input.includes('higienizar')) return 'Lave bem os frascos de vidro e retire tampas plásticas para facilitar o trabalho dos catadores!';
+            if(input.includes('apoiar') || input.includes('cadastrar')) { switchTab('apoiar'); return 'Mudei você para a aba de <strong>Apoiar</strong> onde está o formulário de cadastro!'; }
+            return 'Ainda estou aprendendo! Tente palavras-chave como <strong>coletas</strong>, <strong>limpar</strong> ou <strong>apoiar</strong>.';
+        }
+
+        /* ENVIO DO FORMULÁRIO SEM VOLTAR AO INÍCIO */
+        const apoioForm = document.getElementById('apoioForm');
+        if(apoioForm) {
+            apoioForm.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                alert('Cadastro concluído com sucesso! Obrigado por apoiar a EcoBeauty. 🌸');
+                this.reset(); 
+            });
+        }
+
+        /* COMPORTAMENTO DO BOTAO SALVAR */
+        const btnSalvar = document.getElementById('btnSalvar');
+        if(btnSalvar) {
+            btnSalvar.addEventListener('click', function() {
+                const btn = this; btn.innerText = "Salvo!"; btn.style.backgroundColor = "#d1fae5";
+                setTimeout(() => { btn.innerText = "Salvar"; btn.style.backgroundColor = ""; }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

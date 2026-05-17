@@ -1,0 +1,267 @@
+/* ==========================================================================
+   1. PALETA DE CORES PERSONALIZADA (Estética & Skincare)
+   ========================================================================= */
+:root {
+    --color-1: #ffa5c4; 
+    --color-2: #d77fa0; 
+    --color-3: #ae5a7c; 
+    --color-4: #863458; 
+    --color-5: #5d0f34; 
+
+    --bg-color: #fffafb;          
+    --text-color: var(--color-5);  
+    --primary-color: var(--color-4); 
+    --primary-light: var(--color-1); 
+    --secondary-color: #059669;    
+    --secondary-light: #d1fae5;   
+    --card-bg: #ffffff;           
+    --border-color: var(--color-2); 
+    
+    --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+}
+
+body.dark-mode {
+    --bg-color: #240413;           
+    --text-color: #fce7f3;         
+    --primary-color: var(--color-2);
+    --primary-light: #3d0520;
+    --card-bg: #2d0619;
+    --border-color: var(--color-3);
+}
+
+/* ==========================================================================
+   2. CONFIGURAÇÕES DE BASE
+   ========================================================================= */
+html {
+    font-size: 16px;
+    transition: font-size 0.2s ease;
+    scroll-behavior: smooth;
+}
+
+html.font-large {
+    font-size: 22px; 
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ==========================================================================
+   3. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================= */
+header {
+    background-color: var(--card-bg);
+    border-bottom: 2px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+    padding-bottom: 4px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color) !important;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.accessibility-controls button {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-sm) 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: bold;
+    margin-left: var(--spacing-sm);
+}
+
+.accessibility-controls button:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   4. COMPONENTES E CARDS
+   ========================================================================= */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--color-4) 0%, var(--color-5) 100%);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: var(--spacing-md); margin-top: 0; }
+.hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto var(--spacing-lg); }
+
+.section-title {
+    text-align: center;
+    margin: var(--spacing-xl) 0 var(--spacing-lg);
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+}
+
+.card h3 { color: var(--primary-color); margin-top: 0; }
+
+.tag {
+    display: inline-block;
+    background-color: var(--secondary-light);
+    color: #065f46;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   5. SEÇÃO DOS AVATARES
+   ========================================================================= */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-xl);
+}
+
+.team-member { text-align: center; max-width: 220px; }
+
+.avatar-wrapper {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto var(--spacing-md);
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    overflow: hidden;
+    background-color: var(--primary-light);
+}
+
+.avatar-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.team-member h4 { margin: 8px 0 4px; color: var(--text-color); font-size: 1.2rem; }
+.team-member p { margin: 0; color: var(--primary-color); font-size: 0.9rem; font-weight: bold; }
+
+/* ==========================================================================
+   6. FORMULÁRIOS
+   ========================================================================= */
+.form-container {
+    max-width: 600px;
+    margin: var(--spacing-lg) auto;
+    background-color: var(--card-bg);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group { margin-bottom: var(--spacing-lg); }
+.form-group label { display: block; margin-bottom: var(--spacing-sm); font-weight: 600; }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 8px;
+    background-color: var(--bg-color); color: var(--text-color); box-sizing: border-box; font-size: 1rem;
+}
+
+/* ==========================================================================
+   7. CHATBOT (GlowAssist)
+   ========================================================================= */
+.chatbot-wrapper { position: fixed; bottom: 24px; right: 24px; z-index: 1000; }
+.chatbot-toggle { 
+    background-color: var(--primary-color); color: white; border: none; width: 60px; height: 60px; 
+    border-radius: 50%; font-size: 1.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; 
+}
+.chatbot-box { 
+    display: none; position: absolute; bottom: 72px; right: 0; width: 330px; height: 430px; 
+    background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; flex-direction: column; overflow: hidden; 
+}
+.chatbot-box.open { display: flex; }
+.chatbot-header { background-color: var(--primary-color); color: white; padding: var(--spacing-md); font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+.chatbot-header button { background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+.chatbot-messages { flex: 1; padding: var(--spacing-md); overflow-y: auto; display: flex; flex-direction: column; gap: var(--spacing-sm); background-color: var(--bg-color); }
+.message { padding: 10px 14px; border-radius: 8px; font-size: 0.9rem; max-width: 85%; }
+.bot-message { background-color: var(--card-bg); color: var(--text-color); align-self: flex-start; border: 1px solid var(--border-color); }
+.user-message { background-color: var(--primary-color); color: white; align-self: flex-end; }
+.chatbot-input-area { display: flex; padding: var(--spacing-sm); background-color: var(--card-bg); border-top: 1px solid var(--border-color); gap: 8px; }
+.chatbot-input-area input { flex: 1; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; background-color: var(--bg-color); color: var(--text-color); }
+.chatbot-input-area button { background-color: var(--primary-color); color: white; border: none; padding: 0 16px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+
+/* ==========================================================================
+   8. OCULTAÇÃO DINÂMICA DAS ABAS
+   ========================================================================= */
+.tab-content { display: none; }
+.tab-content.active-tab { display: block; }
+
+footer { text-align: center; padding: var(--spacing-lg) 0; border-top: 1px solid var(--border-color); background-color: var(--card-bg); margin-top: var(--spacing-xl); }
