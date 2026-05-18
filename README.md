@@ -3,7 +3,7 @@
 Projeto integrador de Programação Front-End focado em sustentabilidade, logística reversa e inclusão socioambiental de catadores de recicláveis.
 
 ## 🚀 Links do Projeto
-* *Site Oficial (GitHub Pages):*(https://sabrinassis.github.io/EcoBeuty/)
+* *Site Oficial (GitHub Pages):*(https://sabrinassis.github.io/EcoBeauty/)
 * *Protótipo (Figma):*(https://www.figma.com/make/w5hfSI4bXiiju0dA4wOH1i/Website-Review?t=1NUVAbexnQquuqWl-1)
 
 ## 🛠️ Recursos Implementados
